@@ -1,0 +1,31 @@
+spring:
+  main:
+    allow-circular-references: true
+  output:
+    ansi:
+      enabled: detect
+  jpa:
+    generate-ddl: true
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app_db
+    username: postgres
+    password: postgres
+    hikari:
+      schema: app_schema
+      connection-init-sql: CREATE SCHEMA IF NOT EXISTS app_schema
+      connection-timeout: 10000
+
+logging:
+  pattern:
+#    console: "%d{dd.MM.yyyy- HH:mm:ss} %clr{INFO} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+#    console: "%d{dd.MM.yyyy- HH:mm:ss} %-5level %logger : %msg%n"
+  level:
+    root: INFO
+app:
+  check-client-api-header: false
+  client-api-key: 12345
+
+
+  version-v1: false
