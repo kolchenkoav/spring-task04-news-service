@@ -1,4 +1,5 @@
 
+![](pictures/logo.png)
 [Постановка задачи](docs/Task.md)
 # REST API для новостного сервиса
 
